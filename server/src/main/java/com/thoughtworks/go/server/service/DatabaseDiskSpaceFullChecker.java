@@ -31,7 +31,7 @@ public class DatabaseDiskSpaceFullChecker extends DiskSpaceChecker {
 
     public DatabaseDiskSpaceFullChecker(EmailSender sender, SystemEnvironment systemEnvironment,
                                         GoConfigService goConfigService, final SystemDiskSpaceChecker diskSpaceChecker) {
-        super(sender, systemEnvironment, systemEnvironment.getDbFolder(), goConfigService, DATABASE_DISK_FULL_ID, diskSpaceChecker);
+        super(sender, systemEnvironment, systemEnvironment.getDbPath(), goConfigService, DATABASE_DISK_FULL_ID, diskSpaceChecker);
     }
 
     //for constructing SchedulingChecker
