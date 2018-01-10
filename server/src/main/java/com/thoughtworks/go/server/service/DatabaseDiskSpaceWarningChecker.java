@@ -33,7 +33,7 @@ public class DatabaseDiskSpaceWarningChecker extends DiskSpaceChecker {
 
     public DatabaseDiskSpaceWarningChecker(EmailSender sender, SystemEnvironment systemEnvironment,
                                            GoConfigService goConfigService, final SystemDiskSpaceChecker diskSpaceChecker, ServerHealthService serverHealthService) {
-        super(sender, systemEnvironment, systemEnvironment.getDbFolder(), goConfigService, DATABASE_DISK_FULL_ID, diskSpaceChecker);
+        super(sender, systemEnvironment, systemEnvironment.getDbPath(), goConfigService, DATABASE_DISK_FULL_ID, diskSpaceChecker);
         this.serverHealthService = serverHealthService;
     }
 
