@@ -449,7 +449,7 @@ public class SystemEnvironment implements Serializable, ConfigDirProvider {
         if (hsqlPath == null) {
             hsqlPath = get(CRUISE_DATABASE_DIR);
         }
-        return new File(hsqlPath);
+        return new File(hsqlPath).getAbsolutePath();
     }
 
     public File getConfigRepoDir() {
